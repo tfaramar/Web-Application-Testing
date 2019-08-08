@@ -1,35 +1,61 @@
+import React from 'react';
 
-//strike - increment by one while less than 3. if more than or equal to 3, reset both balls and strikes to zero
-export const strike = (balls = 0, strikes = 0) => {
-    if(strikes <= 2) {
-        strikes += 1;
+const Dashboard = props => {
+
+    export const resetAll = () => {
+        ballCount = 0;
+        strikeCount = 0;
     }
-    else {strikes = 0}
 
-    return strikes;
-}
-
-//ball - increment by one while less than 4. if more than or equal to 4, reset both balls and strikes to zero
-export const ball = (balls = 0, strikes = 0) => {
-    if(balls <= 3) {
-        balls += 1;
-    }
-    else {balls = 0}
-
-    return balls;
-}
-
-//foul - if strikes value is equal to or less than 1, increase by one. if strikes value is two, do not increase
-export const foul = (strikes = 0) => {
-    if(strikes <= 1) {
-        strikes += 1;
-    }
+    export const strike = () => {
+        if(strikes <= 2) {
+            strikes += 1;
+        }
+        else {strikes = 0}
     
-    return strikes;
+        return strikes;
+    }
+
+    export const ball = () => {
+        if(balls <= 3) {
+            balls += 1;
+        }
+        else {balls = 0}
+    
+        return balls;
+    }
+
+    export const foul = (strikes = 0) => {
+        if(strikes <= 1) {
+            strikes += 1;
+        }
+        
+        return strikes;
+    }
+
+    return (
+        <div className='dashboard'>
+            <h2>Dashboard</h2>
+            <button className="strike-button" onClick={}>
+                Strike
+            </button>
+            <button className="ball-button" onClick={}>
+                Ball
+            </button>
+            <button className="foul-button" onClick={}>
+                Foul
+            </button>
+            <button className="hit-button" onClick={}>
+                Hit
+            </button>
+
+        </div>
+    )
+
 }
 
-//hit - reset strikes and balls to 0
-export const hit = () => {
-    //setState({ strikes: 0, balls: 0 })
+export default Dashboard;
 
-}
+
+
+

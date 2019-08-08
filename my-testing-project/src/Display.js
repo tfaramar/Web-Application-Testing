@@ -2,15 +2,14 @@ import React from 'react';
 
 const Display = props => {
     return (
-        <div>
+        <div className = 'display'>
             <h2>ScoreBoard</h2>
             <div className='ball-display'>
-                <h3>Balls</h3>
+                <h3>Balls: {props.ballCount}</h3>
             </div>
             <div className='strike-display'>
-                <h3>Strikes</h3>
+                <h3>Strikes: {props.strikeCount}</h3>
             </div>
-
         </div>
     )
 };
