@@ -25,10 +25,15 @@ function App() {
       setBalls(balls+1);
     }
   };
-  
-
-
-  
+  const foulFunction = () => {
+    if (strikes < 2) {
+      setStrikes(strikes+1);
+    }
+  };
+  const hitFunction = () => {
+      setStrikes(0);
+      setBalls(0);
+  }
   
     return (
       <div className="App">
@@ -36,7 +41,9 @@ function App() {
             <h1>At Bat</h1>
             <Display strikes={strikes} balls={balls}/>
             <Dashboard strike={strikeFunction}
-                        ball={ballFunction}/>
+                        ball={ballFunction}
+                        foul={foulFunction}
+                        hit={hitFunction}/>
         </header>
         
       </div>
