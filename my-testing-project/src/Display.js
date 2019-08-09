@@ -5,10 +5,10 @@ const Display = props => {
         <div className = 'display'>
             <h2>ScoreBoard</h2>
             <div className='ball-display'>
-                <h3>Balls: {props.ballCount}</h3>
+                <h3>Balls: {props.balls}</h3>
             </div>
             <div className='strike-display'>
-                <h3>Strikes: {props.strikeCount}</h3>
+                <h3>Strikes: {props.strikes}</h3>
             </div>
         </div>
     )
