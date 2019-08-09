@@ -17,6 +17,16 @@ describe("<App />", () => {
     render(<App />);
   });
 
+  it('functions are working', () => {
+    const {getByText} = render(<App />);
+    const strike = getByText(/^strike$/i);
+    const ball = getByText(/^ball$/i);
+    const foul = getByText(/^foul$/i);
+    const hit = getByText(/^hit$/i);
+
+  });
+
+
 
 });
 
